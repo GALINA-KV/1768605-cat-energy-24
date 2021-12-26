@@ -1,7 +1,17 @@
 .programs {
   outline: 2px solid green;
   outline-offset: -2px;
-  margin: 20px 20px 20px 20px;
+  margin: 20px 0 20px 0px;
+
+  background-color: @light-color;
+}
+
+.programs__wrapper {
+  display: flex;
+  outline: 2px solid red;
+  outline-offset: -2px;
+  margin: auto;
+  padding: 0 20px;
 }
 
 .programs__title {
@@ -10,14 +20,19 @@
   text-transform: uppercase;
 }
 
-.programs__item {
-  margin-top: 20px;
-  background-color: #F2F2F2;
+.programs__list {
+  display: flex;
+  flex-direction: column;
 }
 
-.programs__item p {
-  width: 227px;
+.programs__item {
+  background-color: #F2F2F2;
+  margin-bottom: 20px;
   color: @dark-grey;
+}
+
+.programs__item:last-child {
+  margin-bottom: 0;
 }
 
 .programs__link {
@@ -25,4 +40,60 @@
   text-transform: uppercase;
   color: @base-color;
   line-height: 16px;
+}
+
+.page-footer__copyright img {
+  display: block;
+}
+
+.page-footer__copyright {
+  display: flex;
+}
+
+.programs__wrapper {
+  @media (min-width: @tablet-width) {
+    max-width: 92%;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 85%;
+    padding: 0 110px;
+  }
+}
+
+.programs__title {
+  @media (min-width: @tablet-width) and (min-width: @desktop-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.programs__list {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.programs__item {
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+  }
+}
+
+.programs__item:first-child {
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.programs__item p {
+  @media (min-width: @tablet-width) and (min-width: @desktop-width) {
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 24px;
+    color: @base-color;
+  }
 }

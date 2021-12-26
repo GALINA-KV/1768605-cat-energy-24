@@ -3,8 +3,30 @@
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 500;
+  outline: 2px solid orange;
+  outline-offset: -2px;
 }
 
 .main-nav__list a {
   color: #000000;
 }
+
+.main-nav__toggle {
+  display: none;
+}
+
+.main-nav__list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 62%;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 33%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+

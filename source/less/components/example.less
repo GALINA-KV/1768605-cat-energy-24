@@ -1,8 +1,13 @@
 .example {
   outline: 2px solid plum;
   outline-offset: -2px;
-  margin: 0 20px;
   background-color: #EAEAEA;
+ }
+
+.example__wrapper {
+  padding: 0 20px;
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
 
 .example__title {
@@ -10,16 +15,20 @@
   line-height: 40px;
   padding-top: 25px;
   padding-bottom: 40px;
+  margin: 0;
 }
 
 .example__text {
   color: @dark-grey;
+  margin: 0;
+  padding-bottom: 20px;
 }
 
 .example__item span {
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
+  display: block;
 }
 
 .example__item p {
@@ -31,4 +40,78 @@
 .example__text--offer {
   text-transform: uppercase;
   line-height: 20px;
+}
+
+.example__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.example__item img {
+  padding-right: 32px;
+}
+
+.example__wrapper {
+  @media (min-width: @tablet-width) {
+    max-width: 92%;
+    padding: 0 30px;
+  }
+
+ @media (min-width: @desktop-width) {
+   max-width: 92%;
+   padding: 0 106px 0 108px;
+   display: flex;
+   flex-direction: column;
+  }
+}
+
+.example__title {
+  @media (min-width: @tablet-width) and (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.example__list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    max-width: 92%;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 35%;
+  }
+}
+
+.example__text {
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Arial;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 50%;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Arial;
+  }
+}
+
+.example__item p {
+  @media (min-width: @tablet-width) and (min-width: @desktop-width) {
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.example__item span {
+  @media (min-width: @tablet-width) and (min-width: @desktop-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }

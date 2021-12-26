@@ -2,4 +2,25 @@
   margin: 24px 30px 62px 30px;
   outline: 2px solid red;
   display: flex;
+  flex-direction: column;
+  background-color: @light-color;
  }
+
+  .page-header__logo {
+   height: 65px;
+ }
+
+.page-header {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 25px 30px 62px 30px;
+  }
+}
+
+.page-header__logo {
+  @media (min-width: @tablet-width) {
+    width: 25%;
+  }
+}

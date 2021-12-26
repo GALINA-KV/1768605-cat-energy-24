@@ -1,7 +1,13 @@
 .instructions {
   outline: 2px solid orange;
   outline-offset: -2px;
-  margin: 0 21px 49px 21px;
+  margin: 0 0 49px 0;
+}
+
+.instructions__wrapper {
+  padding: 0 21px;
+  outline: 2px solid blue;
+  outline-offset: -2px;
 }
 
 .instructions__title {
@@ -9,12 +15,91 @@
   line-height: 40px;
 }
 
-.instructions__list {
+.instructions__item  {
+  margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
 }
 
-.instruction__item p {
-  width: 199px;
+.instructions__item:last-child  {
+  margin-bottom: 0;
+}
+
+.instructions__item p {
   color: @dark-grey;
+  margin-left: 20px;
+}
+
+
+.instructions__title {
+  @media (min-width: @tablet-width) and (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.instructions__item p {
+  @media (min-width: @tablet-width) and (min-width: @desktop-width) {
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.instructions__wrapper {
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    max-width: 95%;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+    max-width: 90%;
+    margin: 0;
+  }
+}
+
+.instructions__list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 79px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 85%;
+    padding-right: 0;
+    margin: 0;
+  }
+}
+
+.instructions__item {
+  @media (min-width: @tablet-width) {
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 85px;
+  }
+}
+
+.instructions__item p {
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+  }
+}
+
+.instructions__item:last-child {
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
 }

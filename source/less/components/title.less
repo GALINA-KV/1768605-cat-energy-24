@@ -1,15 +1,20 @@
 .title {
   outline: 2px solid blue;
-  margin: 0 30px 0 29px;
+  outline-offset: -2px;
+  margin: 0 px 0 px;
   background-color: rgba(104, 183, 56, 0.85);
   color: #FFFFFF;
+}
+
+.title__wrapper {
+  padding: 0 20px;
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
 
 .title__main {
   font-size: 36px;
   line-height: 36px;
-  padding-left: 88px;
-  padding-right: 207px;
   color: @light-color;
 }
 
@@ -18,4 +23,34 @@
   line-height: 14px;
   text-transform: uppercase;
   color: @light-color;
+}
+
+.title__wrapper {
+  @media (min-width: @tablet-width) {
+    padding: 0 30px 0 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding-left: 110px;
+    max-width: 93%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.title__main {
+  @media (min-width: @tablet-width) and (min-width: @desktop-width){
+    font-size: 60px;
+    line-height: 60px;
+    color: @base-color;
+  }
+}
+
+.title__slogan {
+  @media (min-width: @tablet-width) and (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @base-color;
+  }
 }
