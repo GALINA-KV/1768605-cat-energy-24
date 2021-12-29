@@ -13,6 +13,7 @@
 .example__title {
   font-size: 36px;
   line-height: 40px;
+  font-weight: 400;
   padding-top: 25px;
   padding-bottom: 40px;
   margin: 0;
@@ -24,14 +25,14 @@
   padding-bottom: 20px;
 }
 
-.example__item span {
+.example__weight {
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
   display: block;
 }
 
-.example__item p {
+.example__result {
   font-size: 12px;
   line-height: 12px;
   color: @dark-grey;
@@ -101,7 +102,7 @@
   }
 }
 
-.example__item p {
+.example__result {
   @media (min-width: @tablet-width) and (min-width: @desktop-width) {
     font-family: Arial;
     font-size: 14px;
@@ -109,9 +110,28 @@
   }
 }
 
-.example__item span {
+.example__weight {
   @media (min-width: @tablet-width) and (min-width: @desktop-width) {
     font-size: 30px;
     line-height: 37px;
   }
 }
+
+.example__image {
+    display: block;
+}
+
+.example__container {
+  @media (min-width: @desktop-width) {
+  display: flex;
+  }
+}
+
+.example__block {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+

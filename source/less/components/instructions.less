@@ -13,6 +13,7 @@
 .instructions__title {
   font-size: 36px;
   line-height: 40px;
+  font-weight: 400;
 }
 
 .instructions__item  {
@@ -24,7 +25,7 @@
   margin-bottom: 0;
 }
 
-.instructions__item p {
+.instructions__text {
   color: @dark-grey;
   margin-left: 20px;
 }
@@ -37,7 +38,7 @@
   }
 }
 
-.instructions__item p {
+.instructions__text {
   @media (min-width: @tablet-width) and (min-width: @desktop-width) {
     font-family: Arial;
     font-size: 16px;
@@ -48,13 +49,13 @@
 .instructions__wrapper {
   @media (min-width: @tablet-width) {
     padding: 0 30px;
-    max-width: 95%;
+    max-width: 100%;
     margin: 0;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0 110px;
-    max-width: 90%;
+    max-width: 100%;
     margin: 0;
   }
 }
@@ -92,7 +93,7 @@
   }
 }
 
-.instructions__item p {
+.instructions__text {
   @media (min-width: @tablet-width) {
     margin-left: 0;
   }
