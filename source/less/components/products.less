@@ -1,7 +1,7 @@
 .products {
   outline: 2px solid green;
   outline-offset: -2px;
-  margin: 0 20px;
+  padding: 0 20px;
 }
 
 .products__title-main {
@@ -9,6 +9,7 @@
   line-height: 36px;
   padding-top: 27px;
   padding-bottom: 41px;
+  font-weight: 400;
 }
 
 .products__title {
@@ -16,6 +17,7 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @special-dark-grey;
+  text-align: left;
 }
 
 .products__catalog {
@@ -23,6 +25,7 @@
   line-height: 20px;
   color: #111111;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .products__text,
@@ -30,6 +33,20 @@
   font-size: 12px;
   line-height: 16px;
   color: @dark-grey;
+}
+
+.products__taste {
+  text-align: center;
+}
+
+.products__text {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.products__text-all {
+  text-align: right;
 }
 
 .products__text-all,
@@ -41,11 +58,27 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
   color: #111111;
 }
 
+.products__item {
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
+.products {
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
+}
+
 .products__title-main {
-  @media (min-width: @tablet-width) and (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
   }
@@ -55,16 +88,18 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 24px;
+    text-align: center;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 21px;
+    text-align: center;
   }
 }
 
 .products__text-all {
-  @media (min-width: @tablet-width) and (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     font-family: Arial;
     font-size: 16px;
     line-height: 16px;
@@ -72,18 +107,40 @@
 }
 
 .products__text-still {
-  @media (min-width: @tablet-width) and (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
-   line-height: 22px;
+    line-height: 22px;
   }
 }
 
 .products__text {
-  @media (min-width: @tablet-width) and (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     font-family: Arial;
     font-size: 16px;
     line-height: 18px;
   }
 }
 
+.products__list {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    width: 100%;
+    border: 2px solid green;
+    grid-row-gap: 60px;
+    grid-column-gap: 60px;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 0;
+  }
 
+  @media (min-width: @desktop-width) {
+    display: grid;
+    width: 100%;
+    border: 2px solid green;
+    grid-row-gap: 60px;
+    grid-column-gap: 80px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0;
+    padding: 0;
+  }
+}

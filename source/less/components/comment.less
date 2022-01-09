@@ -1,15 +1,41 @@
-.comment {
+.comment__wrapper {
   outline: 2px solid brown;
   outline-offset: -2px;
-  margin: 0 20px 22px 20px;
+  padding: 0 20px;
+}
+
+.comment__title {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
 }
 
 .comment__text {
-  font-size: 24px;
-  line-height: 26px;
-}
-
-.comment__form textarea {
   text-transform: uppercase;
   color: @dark-grey;
+  width: 100%;
+}
+
+.comment__title {
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 36px;
+  }
+}
+
+.comment__wrapper {
+  @media (min-width: @tablet-width) {
+    padding: 0 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
+}
+
+.comment__text {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }

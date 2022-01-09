@@ -1,15 +1,24 @@
 .title {
   outline: 2px solid blue;
   outline-offset: -2px;
-  margin: 0 px 0 px;
-  background-color: rgba(104, 183, 56, 0.85);
   color: #FFFFFF;
 }
 
 .title__wrapper {
-  padding: 0 20px;
-  outline: 2px solid red;
-  outline-offset: -2px;
+  position: relative;
+}
+
+.title__image {
+  display: block;
+  margin-bottom: 139px;
+ }
+
+.title__image--product {
+  display: block;
+  position: absolute;
+  top: 167px;
+  left: 20px;
+  right: 20px;
 }
 
 .title__main {
@@ -17,13 +26,27 @@
   line-height: 36px;
   color: @light-color;
   font-weight: 400;
-}
+  margin: 0;
+  position: absolute;
+  top: 27px;
+  text-align: center;
+ }
 
 .title__slogan {
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
   color: @light-color;
+  position: absolute;
+  top: 124px;
+  margin: 0;
+  left: 30px;
+}
+
+.title__image {
+  @media (min-width: @tablet-width) {
+  display: block;
+  }
 }
 
 .title__wrapper {
@@ -41,17 +64,31 @@
 }
 
 .title__main {
-  @media (min-width: @tablet-width) and (min-width: @desktop-width){
+  @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
     color: @base-color;
   }
+
+  @media (min-width: @desktop-width) {
+    top: 225px;
+    left: 110px;
+    text-align: left;
+  }
 }
 
 .title__slogan {
-  @media (min-width: @tablet-width) and (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
     color: @base-color;
+    top: 161px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 385px;
+    left: 110px;
+    
   }
 }

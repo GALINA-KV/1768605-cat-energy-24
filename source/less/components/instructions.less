@@ -1,19 +1,18 @@
 .instructions {
-  outline: 2px solid orange;
-  outline-offset: -2px;
-  margin: 0 0 49px 0;
+  border-bottom: 1px solid #E6E6E6;
+  margin: 0 0 47px 0;
 }
 
 .instructions__wrapper {
   padding: 0 21px;
-  outline: 2px solid blue;
-  outline-offset: -2px;
+
 }
 
 .instructions__title {
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
+  margin: 0;
 }
 
 .instructions__item  {
@@ -27,34 +26,50 @@
 
 .instructions__text {
   color: @dark-grey;
-  margin-left: 20px;
+  margin: 0 0 0 20px;
+}
+
+.instructions {
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 26px 0;
+  }
 }
 
 
 .instructions__title {
-  @media (min-width: @tablet-width) and (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+     padding-bottom: 72px;
   }
 }
 
 .instructions__text {
-  @media (min-width: @tablet-width) and (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     font-family: Arial;
     font-size: 16px;
     line-height: 24px;
+    padding-top: 31px;
   }
 }
 
 .instructions__wrapper {
   @media (min-width: @tablet-width) {
-    padding: 0 30px;
+    padding: 0 0 0 30px;
     max-width: 100%;
     margin: 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 110px;
+    padding: 0 106px 0 110px;
     max-width: 100%;
     margin: 0;
   }
@@ -66,7 +81,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-right: 79px;
+    padding-right: 109px;
+    width: 92%;
     margin: 0;
   }
 
@@ -74,7 +90,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 85%;
+    justify-content: space-between;
+    width: 100%;
     padding-right: 0;
     margin: 0;
   }
@@ -82,14 +99,15 @@
 
 .instructions__item {
   @media (min-width: @tablet-width) {
-    width: 42%;
     display: flex;
     flex-direction: column;
     margin-bottom: 37px;
+    width: 50%;
   }
 
   @media (min-width: @desktop-width) {
     margin-right: 85px;
+    width: 25%;
   }
 }
 
