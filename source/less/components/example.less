@@ -7,11 +7,11 @@
 
 .example__wrapper {
   margin: 0;
+  padding: 0 20px;
 }
 
 .example__block {
   position: relative;
-  padding-left: 20px;
 }
 
 .example__title {
@@ -20,7 +20,6 @@
   font-weight: 400;
   padding-bottom: 40px;
   margin: 0;
-  padding-left: 20px;
 }
 
 .example__text {
@@ -83,12 +82,14 @@
 .example__wrapper {
   @media (min-width: @tablet-width) {
     max-width: 92%;
+    padding: 0 30px;
   }
 
  @media (min-width: @desktop-width) {
    max-width: 100%;
    display: flex;
    flex-direction: column;
+   padding: 0;
   }
 }
 
@@ -111,8 +112,8 @@
     line-height: 60px;
     padding-top: 43px;
     padding-bottom: 60px;
-    padding-left: 30px;
   }
+
   @media (min-width: @desktop-width) {
     padding-bottom: 73px;
     padding-left: 110px;
