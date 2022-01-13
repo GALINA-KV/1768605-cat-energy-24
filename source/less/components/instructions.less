@@ -1,20 +1,124 @@
 .instructions {
-  outline: 2px solid orange;
-  outline-offset: -2px;
-  margin: 0 21px 49px 21px;
+  border-bottom: 1px solid #E6E6E6;
+  margin: 0 0 47px 0;
+}
+
+.instructions__wrapper {
+  padding: 0 21px;
+
 }
 
 .instructions__title {
   font-size: 36px;
   line-height: 40px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.instructions__item  {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.instructions__item:last-child  {
+  margin-bottom: 0;
+}
+
+.instructions__text {
+  color: @dark-grey;
+  margin: 0 0 0 20px;
+}
+
+.instructions {
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 26px 0;
+  }
+}
+
+
+.instructions__title {
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+     padding-bottom: 72px;
+  }
+}
+
+.instructions__text {
+  @media (min-width: @tablet-width) {
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 31px;
+  }
+}
+
+.instructions__wrapper {
+  @media (min-width: @tablet-width) {
+    padding: 0 0 0 30px;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 106px 0 110px;
+    max-width: 100%;
+    margin: 0;
+  }
 }
 
 .instructions__list {
-  display: flex;
-  flex-direction: column;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 109px;
+    width: 92%;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 0;
+    margin: 0;
+  }
 }
 
-.instruction__item p {
-  width: 199px;
-  color: @dark-grey;
+.instructions__item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 37px;
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 85px;
+    width: 25%;
+  }
+}
+
+.instructions__text {
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+  }
+}
+
+.instructions__item:last-child {
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
 }

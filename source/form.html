@@ -3,10 +3,14 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт Энерджи</title>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -27,44 +31,46 @@
       <section class="questionnaire">
         <div class="questionnaire__wrapper">
           <h2 class="questionnaire__title">Подбор программы</h2>
-          <p class="questionnaire-item">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
-          <form class="questionnaire-form" action="https://echo.htmlacademy.ru" method="post">
-            <p class="questionnaire-item">
-              <label class="questionnaire-description" for="name-field">Имя*:</label>
-              <input type="text" name="name" id="name-field" placeholder="барсик">
-            </p>
-            <p class="questionnaire-item">
-              <label class="questionnaire-description" for="weight-field">Вес (кг):*</label>
-              <input type="number" name="weight" id="weight-field" placeholder="7">
-            </p>
-            <p class="questionnaire-item">
-              <label class="questionnaire-description" for="age-field">Возраст (лет):</label>
-              <input type="number" name="age" id="age-field" placeholder="7">
-            </p>
-          </form>
-          <fieldset class="program">
-            <ul class="program__list">
-              <li class="program__item">
-                <input class="program-input-radio" type="radio" name="weight-loss" value="weight-loss"
-                  id="filter-weight-loss" checked>
-                <label for="filter-weight-loss">похудение</label>
-              </li>
-              <li class="program__item">
-                <input class="program-input-radio" type="radio" name="weight-gain" value="weight-gain"
-                  id="filter-weight-gain">
-                <label for="filter-weight-gain">Набор массы</label>
-              </li>
-              <li class="program__item">
-                <input class="program-input-radio" type="radio" name="not" value="not" id="filter-not">
-                <label for="filter-not">Не знаю (Нужен ваш совет)</label>
-              </li>
-            </ul>
-          </fieldset>
+          <p class="questionnaire-text">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
+          <div class="questionnaire__container">
+            <form class="questionnaire-form" action="https://echo.htmlacademy.ru" method="post">
+              <p class="questionnaire-item">
+                <label class="questionnaire-description" for="name-field">Имя*:</label>
+                <input type="text" name="name" id="name-field" placeholder="барсик">
+              </p>
+              <p class="questionnaire-item">
+                <label class="questionnaire-description" for="weight-field">Вес (кг):*</label>
+                <input type="number" name="weight" id="weight-field" placeholder="7">
+              </p>
+              <p class="questionnaire-item">
+                <label class="questionnaire-description" for="age-field">Возраст (лет):</label>
+                <input type="number" name="age" id="age-field" placeholder="7">
+              </p>
+            </form>
+            <fieldset class="program">
+              <ul class="program__list">
+                <li class="program__item">
+                  <input class="program-input-radio" type="radio" name="weight-loss" value="weight-loss"
+                    id="filter-weight-loss" checked>
+                  <label for="filter-weight-loss">похудение</label>
+                </li>
+                <li class="program__item">
+                  <input class="program-input-radio" type="radio" name="weight-gain" value="weight-gain"
+                    id="filter-weight-gain">
+                  <label for="filter-weight-gain">Набор массы</label>
+                </li>
+                <li class="program__item">
+                  <input class="program-input-radio" type="radio" name="not" value="not" id="filter-not">
+                  <label for="filter-not">Не знаю (Нужен ваш совет)</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
         </div>
       </section>
       <section class="details">
         <div class="details__wrapper">
-          <p class="details__text">Контактные данные (владельца кота)</p>
+          <h3 class="details__title">Контактные данные (владельца кота)</h3>
           <form class="details__form" action="https://echo.htmlacademy.ru" method="post">
             <p class="details__item">
               <label class="details__description" for="email-field">E-mail:*</label>
@@ -80,35 +86,43 @@
         </div>
       </section>
       <section class="comment">
-        <p class="comment__text">Комментарий</p>
-        <form class="comment__form" action="https://echo.htmlacademy.ru" method="post">
-          <textarea name="comment" id="comment-field" rows="5" cols="33">Расскажите обо всех повaдках кота</textarea>
+        <div class="comment__wrapper">
+          <h3 class="comment__title">Комментарий</h3>
+          <form class="comment__form" action="https://echo.htmlacademy.ru" method="post">
+            <textarea class="comment__text" name="comment" id="comment-field" rows="5"
+              cols="33">Расскажите обо всех повaдках кота</textarea>
+          </form>
+        </div>
       </section>
       <section class="still">
         <div class="still__wpapper">
           <h3 class="still__title">Дополнительно</h3>
-          <ul class="still__list">
-            <li class="still__item still__item--checkbox">
-              <input class="still-input-checkbox" type="checkbox" name="sweetener" id="filter-sweetener"
-                checked>
-              <label for="filter-sweetener">сахарозаменитель</label>
-            </li>
-            <li class="still__item still__item--checkbox">
-              <input class="still-input-checkbox" type="checkbox" name="water" id="filter-water">
-              <label for="filter-water">питьевая вода</label>
-            </li>
-            <li class="still__item still__item--checkbox">
-              <input class="still-input-checkbox" type="checkbox" name="milk" id="filter-milk" checked>
-              <label for="filter-milk">молоко</label>
-            </li>
-            <li class="still__item still__item--checkbox">
-              <input class="still-input-checkbox" type="checkbox" name="vitamins" id="filter-vitamins">
-              <label for="filter-vitamins">витамины</label>
-            </li>
-          </ul>
-          <button class="button__basis" type="button">отправить заявку</button>
-          </fieldset>
-          <small class="still__text">* — Обязательные поля</small>
+          <div class="still__container">
+            <ul class="still__list">
+              <li class="still__item still__item--checkbox">
+                <input class="still-input-checkbox" type="checkbox" name="sweetener" id="filter-sweetener" checked>
+                <label for="filter-sweetener">сахарозаменитель</label>
+              </li>
+              <li class="still__item still__item--checkbox">
+                <input class="still-input-checkbox" type="checkbox" name="water" id="filter-water">
+                <label for="filter-water">питьевая вода</label>
+              </li>
+              <li class="still__item still__item--checkbox">
+                <input class="still-input-checkbox" type="checkbox" name="milk" id="filter-milk" checked>
+                <label for="filter-milk">молоко</label>
+              </li>
+              <li class="still__item still__item--checkbox">
+                <input class="still-input-checkbox" type="checkbox" name="vitamins" id="filter-vitamins">
+                <label for="filter-vitamins">витамины</label>
+              </li>
+              <li class="still__item">
+                <button class="button" type="button">отправить заявку</button>
+              </li>
+              <li class="still__item">
+                <p class="still__text">* — Обязательные поля</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </div>
@@ -124,33 +138,33 @@
         <img src="img/index/map pin.png" width="57" height="53" alt="Логотип Кэт энерджи">
       </div>
       <div class="page-footer__container-icon">
-      <img src="img/index/footer-logo.svg" width="128" height="24" alt="Интернет магазин Кэт энерджи">
-      <div class="page-footer__social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link" href="https://vk.com/htmlacademy"><span class="visually-hidden">В контакте</span>
-              <img src="img/icon/icon-vkontakte.svg" width="23" height="16">
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="https://www.instagram.com/htmlacademy"><span
-                class="visually-hidden">Инстаграмм</span>
-              <img src="img/icon/icon-instagram.svg" width="16" height="16">
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="https://www.facebook.com/htmlacademy"><span
-                class="visually-hidden">Фэйсбук</span>
-              <img src="img/icon/icon-facebook.svg" width="22" height="22">
-            </a>
-          </li>
-        </ul>
+        <img class="page-footer__container-icon--brend" src="img/index/footer-logo.svg" width="128" height="24" alt="Интернет магазин Кэт энерджи">
+        <div class="page-footer__social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link" href="https://vk.com/htmlacademy"><span class="visually-hidden">В контакте</span>
+                <img src="img/icon/icon-vkontakte.svg" width="23" height="16">
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://www.instagram.com/htmlacademy"><span
+                  class="visually-hidden">Инстаграмм</span>
+                <img src="img/icon/icon-instagram.svg" width="16" height="16">
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://www.facebook.com/htmlacademy"><span
+                  class="visually-hidden">Фэйсбук</span>
+                <img src="img/icon/icon-facebook.svg" width="22" height="22">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright">
+          <p>HTML Academy</p>
+          <img src="img/index/logo-html.svg" width="27" height="34" alt="Логотип ХТМЛ- Академии">
+        </div>
       </div>
-      <div class="page-footer__copyright">
-      <p>HTML Academy</p>
-      <img src="img/index/logo-html.svg" width="27" height="34" alt="Логотип ХТМЛ- Академии">
-    </div>
-    </div>
   </footer>
 </body>
 

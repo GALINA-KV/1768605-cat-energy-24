@@ -1,16 +1,30 @@
-.title {
+.title__wrapper {
   outline: 2px solid blue;
-  margin: 0 30px 0 29px;
-  background-color: rgba(104, 183, 56, 0.85);
+  outline-offset: -2px;
   color: #FFFFFF;
+  background-image: url(/img/index/index-mobile-1.jpg);
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.title__container {
+  background-color: #68B738;
+  opacity: 0.85;
+  margin-bottom: -135px;
+  height: 302px;
+  }
+
+.title__product {
+  padding-top: px;
+  height: 300px;
 }
 
 .title__main {
   font-size: 36px;
   line-height: 36px;
-  padding-left: 88px;
-  padding-right: 207px;
   color: @light-color;
+  font-weight: 400;
 }
 
 .title__slogan {
@@ -18,4 +32,62 @@
   line-height: 14px;
   text-transform: uppercase;
   color: @light-color;
+}
+
+.title__image {
+  display: block;
+  width: 320px;
+  height: 270px;
+  z-index: 2;
+}
+
+.title__wrapper {
+  @media (min-width: @tablet-width) {
+    padding: 0 30px 0 29px;
+    background: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding-left: 110px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.title__container {
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
+}
+
+.title__main {
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    color: @base-color;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 225px;
+    left: 110px;
+    text-align: left;
+  }
+}
+
+.title__slogan {
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @base-color;
+    top: 161px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 385px;
+    left: 110px;
+
+  }
 }
