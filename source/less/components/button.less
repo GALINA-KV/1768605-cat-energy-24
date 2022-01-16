@@ -14,16 +14,31 @@
   font-size: inherit;
   line-height: inherit;
   width: 88%;
-  margin: 295px 20px 0 20px;
+  margin: 298px 20px 0 20px;
 }
 
 .button--basis {
   background-color: #F2F2F2;
 }
 
+.button {
+  @media (min-width: @tablet-width) {
+    height: 54px;
+  }
+}
+
 .button--title {
   @media (min-width: @tablet-width) {
     margin: 0;
-    width: 35%;
+    width: 36%;
+    margin-top: 35px;
+    font-family: Oswald;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 19%;
   }
 }
