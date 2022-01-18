@@ -15,8 +15,8 @@
 
 <body class="page__body">
   <header class="page-header">
-    <a class="page-header__logo"><img class="page-header__logo-image" src="img/index/logotype-mobile.png" width="191"
-        height="37" alt="Логотип магазина Кэт энерджи"></a>
+    <a class="page-header__logo"><img class="page-header__logo-image--pin" src="img/index/logo-mobile.svg" width="33"
+        height="37" alt="Логотип магазина Кэт энерджи"><img class="page-header__logo-image--name" src="img/index/footer-logo.svg" width="101" height="18" alt="Логотип магазина Кэт энерджи"></a>
     <nav class="main-nav main-nav--opened">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-nav__list site-list">
@@ -29,22 +29,16 @@
   <main class="page-main">
     <section class="title">
       <div class="title__wrapper">
-        <div class="title__container">
         <h1 class="title__main">Функциональное<br>питание для котов</h1>
         <p class="title__slogan">Занялся собой? Займись котом!</p>
         <button class="button button--title" type="button">подобрать программу</button>
-        </div>
-      <div class="title__product">
-        <img class="title__image" src="img/index/can-mobile-2.png">
-      </div>
       </div>
     </section>
     <section class="programs">
       <div class="programs__wrapper">
         <h3 class="visually-hidden">Продукция</h3>
         <ul class="programs__list">
-          <li class="programs__item">
-            <img class="programs__image" src="img/index/cat sit.png" width="50" height="53">
+          <li class="programs__item programs__item--cat">
             <h3 class="programs__title">похудение</h3>
             <p class="programs__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора
               на диету! Cat Energy
@@ -53,8 +47,7 @@
             <a class="programs__link" href="catalog.html">Каталог Slim<img src="img/icon/arrow.svg" width="24"
                 height="12" alt="Каталог Слим"></a>
           </li>
-          <li class="programs__item">
-            <img class="programs__image" src="img/index/cat movement.png" width="67" height="50">
+          <li class="programs__item programs__item--stalls">
             <h3 class="programs__title">Набор массы</h3>
             <p class="programs__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
               поможет вашему коту
@@ -70,20 +63,16 @@
       <div class="instructions__wrapper">
         <h3 class="instructions__title">Как это работает</h3>
         <ul class="instructions__list">
-          <li class="instructions__item">
-            <img src="img/index/group one.png" width="60" height="60">
+          <li class="instructions__item instructions__item--sheet">
             <p class="instructions__text">Функциональное питание содержит только полезные питательные вещества.</P>
           </li>
-          <li class="instructions__item">
-            <img src="img/index/group two.png" width="60" height="60">
+          <li class="instructions__item instructions__item--powder">
             <p class="instructions__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
           </li>
-          <li class="instructions__item">
-            <img src="img/index/group three.png" width="60" height="60">
+          <li class="instructions__item instructions__item--function">
             <p class="instructions__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
-          <li class="instructions__item">
-            <img src="img/index/group four.png" width="60" height="60">
+          <li class="instructions__item instructions__item--alarm">
             <p class="instructions__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
           </li>
         </ul>
@@ -93,42 +82,51 @@
       <div class="example__wrapper">
         <h3 class="example__title">Живой пример</h3>
         <div class="example__container">
-          <div class="example__block">
-            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-              Slim.
-              Отличный результат без
-              изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-            <ul class="example__list">
-              <li class="example__item">
-                <img class="example__border" src="img/index/weight back.svg" width="124" height="56">
-                <span class="example__weight">5 кг</span>
-                <p class="example__result">снижение<br> веса</p>
-              </li>
-              <li class="example__item">
-                <img class="example__border" src="img/index/weight back.svg" width="124" height="56">
-                <span class="example__weight">60 кг</span>
-                <p class="example__result">затрачено<br> времени</p>
-              </li>
-              <li class="example__item example__item--price">
-                <p class="example__text--offer">Затраты на питание: 15 000 руб.</p>
-              </li>
-            </ul>
+          <div class="example__chapter">
+            <div class="example__block">
+              <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+                Slim.
+                Отличный результат без
+                изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            </div>
+            <div class="example__result">
+              <ul class="example__list">
+                <li class="example__item">
+                  <img class="example__border" src="img/index/weight back.svg" width="124" height="56">
+                  <span class="example__weight">5 кг</span>
+                  <p class="example__loss">снижение<br> веса</p>
+                </li>
+                <li class="example__item">
+                  <img class="example__border" src="img/index/weight back.svg" width="124" height="56">
+                  <span class="example__weight">60 кг</span>
+                  <p class="example__loss">затрачено<br> времени</p>
+                </li>
+              </ul>
+            </div>
+            <div class="example__price">
+              <p class="example__text--offer">Затраты на питание: 15 000 руб.</p>
+            </div>
           </div>
           <div class="example__filter">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/index/image-cat-tablet.jpg 1x, img/index/image-cat-tablet@2x.jpg 2x">
             <img class="example__image" src="img/index/cat-before.jpg" width="280" height="232" alt="Фото кота">
-            <div class="range-filter">
-              <span>было</span>
-              <div class="range-controls">
-                <div class="scale">
-                  <div class="bar" style="width: 30%; margin-left: 20%;"></div>
+            </picture>
+            <div class="range__block">
+              <label>было</label>
+              <div class="range__filter">
+                <div class="range__controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                    <div class="toggle" tabindex="0" style="left: 45%;"></div>
+                  </div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0" style="left: 20%;"></div>
-                <div class="toggle toggle-max" tabindex="0" style="left: 50% "></div>
-                <span>стало</span>
               </div>
+              <label>стало</label>
             </div>
           </div>
         </div>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
