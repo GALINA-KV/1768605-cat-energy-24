@@ -1,4 +1,4 @@
-/*.site-list {
+.site-list {
   margin: 0;
   padding: 0;
 }
@@ -8,7 +8,6 @@
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 500;
-  position: relative;
   display: block;
   text-align: center;
   padding-top: 21px;
@@ -28,4 +27,12 @@
     width: 512px;
   }
 }
-*/
+
+.site-list a {
+  @media (min-width: @tablet-width) {
+    border-top: none;
+    border-bottom: none;
+  }
+}
+
+

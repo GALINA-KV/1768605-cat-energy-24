@@ -9,12 +9,16 @@
   line-height: 24px;
   padding: 25px 0 36px 19px;
   font-weight: 400;
+  margin: 0;
 }
 
 .additional-offers__list {
-  outline: 2px solid yellow;
-  outline-offset: -2px;
   margin: 0;
+}
+
+.additional-offers__item {
+  border-top: 1px solid #CDCDCD;
+  border-bottom: 1px solid #CDCDCD;
 }
 
 .additional-offers__title {
@@ -47,18 +51,20 @@
 }
 
 .additional-offers__prizes {
-  background: linear-gradient(to top,#68B738 1%, rgba(104,183,56,0.85) 99%),
-  url(/img/catalog/cat-bag.jpg) 0 0/280px 289px no-repeat;
-
+  background: url(/img/icon/icon_gift.png) 101px 58px/78px 80px no-repeat, linear-gradient(to top,#68B738 1%, rgba(104,183,56,0.85) 99%),
+  url(/img/catalog/cat-bag-mobile.jpg) 0 0/280px 289px no-repeat;
   outline: 2px solid blueviolet;
   outline-offset: -2px;
   height: 289px;
+  margin-top: 35px;
 }
 
  .additional-offers__gift {
   font-size: 16px;
   line-height: 20px;
   color: @light-color;
+  padding: 186px 61px 0 58px;
+  text-align: center;
   margin: 0;
   }
 
@@ -87,8 +93,6 @@
 
 .additional-offers__list {
   @media (min-width: @tablet-width) {
-    outline: 2px solid red;
-    outline-offset: -2px;
     width: 100%;
   }
 }
@@ -96,12 +100,19 @@
 .additional-offers__item {
   @media (min-width: @tablet-width) {
     padding: 26px 38px 35px 38px;
-    outline: 2px solid orange;
-    outline-offset: -2px;
+    border: 1px solid #CDCDCD;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 8px 0 9px 0;
+    border: none;
+    border-top: 1px solid #CDCDCD;
   }
 }
 
@@ -154,31 +165,31 @@
 
 .additional-offers__prizes {
   @media (min-width: @tablet-width) {
+    background: url(/img/icon/icon_gift.png) 77px 57px/80px 82px no-repeat, linear-gradient(to top,#68B738 1%, rgba(104,183,56,0.85) 99%),
+    url(/img/catalog/cat-bag-tablet.jpg) 0 0/707px 200px no-repeat;
     width: 100%;
     margin-top: 69px;
+    height: 200px;
   }
 
   @media (min-width: @desktop-width) {
     width: 100%;
     margin-top: 0;
+    height: 289px;
+    background: url(/img/icon/icon_gift.png) 84px 56px/80px 82px no-repeat, linear-gradient(to top,#68B738 1%, rgba(104,183,56,0.85) 99%),
+    url(/img/catalog/cat-bag-desktop.jpg) 0 0/245px 289px no-repeat;
   }
 }
 
 .additional-offers__gift {
   @media (min-width: @tablet-width) {
     text-align: left;
-    top: 71px;
-    right: 124px;
-    bottom: 69px;
-    left: 422px;
+    padding: 71px 0 0 422px;
   }
 
   @media (min-width: @desktop-width) {
     text-align: center;
-    top: 184px;
-    right: 43px;
-    bottom: 42px;
-    left: 41px;
+    padding: 184px 43px 0 41px;
   }
 }
 
@@ -194,17 +205,8 @@
 .additional-offers__container {
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 4fr 1fr;
     grid-column-gap: 80px;
   }
 }
-
-.additional-offers__item {
-  @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    padding: 0;
-  }
-}
-
 

@@ -15,17 +15,36 @@
 
 <body class="page__body">
   <header class="page-header">
-    <a class="page-header__logo"><img class="page-header__logo-image--pin" src="img/index/logo-mobile.svg" width="33"
-      height="37" alt="Логотип магазина Кэт энерджи"><img class="page-header__logo-image--name" src="img/index/footer-logo.svg" width="101" height="18" alt="Логотип магазина Кэт энерджи"></a>
-    <nav class="main-nav">
+    <a class="page-header__logo"><img class="page-header__logo-image--pin" src="img/index/logo-mobile 1x.png" width="33"
+        height="37" alt="Логотип магазина Кэт энерджи"><img class="page-header__logo-image--name"
+        src="img/index/footer-logo 1x.svg" width="101" height="18" alt="Логотип магазина Кэт энерджи"></a>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list"><a href="index.html">Главная</a></li>
-        <li class="site-list__item site-list__item--active"><a href="index.html">Каталог продукции</a></li>
+        <li class="site-list__item site-list__item--active"><a href="catalog.html">Главная</a></li>
+        <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
         <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
       </ul>
     </nav>
   </header>
+
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
+
   <main class="page-main">
     <section class="products">
       <div class="products__wrapper">
@@ -41,7 +60,7 @@
             <p class="products__text">Масса<span class="products__text-all">500 г</span></p>
             <p class="products__text">Вкус<span class="products__text-all">Курица</span></p>
             <p class="products__text">Цена<span class="products__text-all">1000 Р.</span></p>
-            <button class="button" type="button">заказать</button>
+            <button class="button button--catalog" type="button">заказать</button>
           </li>
           <li class="products__item">
             <picture>
@@ -53,7 +72,7 @@
             <p class="products__text">Масса<span class="products__text-all">1000 г</span></p>
             <p class="products__text">Вкус<span class="products__text-all">Курица</span></p>
             <p class="products__text">Цена<span class="products__text-all">1000 Р.</span></p>
-            <button class="button" type="button">заказать</button>
+            <button class="button button--catalog" type="button">заказать</button>
           </li>
           <li class="products__item">
             <picture>
@@ -65,7 +84,7 @@
             <p class="products__text">Масса<span class="products__text-all">500 г</span></p>
             <p class="products__text">Вкус<span class="products__text-all">Рыба</span></p>
             <p class="products__text">Цена<span class="products__text-all">700 Р.</span></p>
-            <button class="button" type="button">заказать</button>
+            <button class="button button--catalog" type="button">заказать</button>
           <li class="products__item">
             <picture>
               <img class="products__image" src="img/catalog/catalog-4-desktop 1.png"
@@ -76,7 +95,7 @@
             <p class="products__text">Масса<span class="products__text-all">1000 г</span></p>
             <p class="products__text">Вкус<span class="products__text-all">Рыба</span></p>
             <p class="products__text">Цена<span class="products__text-all">1000 Р.</span></p>
-            <button class="button" type="button">заказать</button>
+            <button class="button button--catalog" type="button">заказать</button>
           </li>
           <li class="products__item">
             <picture>
@@ -88,7 +107,7 @@
             <p class="products__text">Масса<span class="products__text-all">500 г</span></p>
             <p class="products__text">Вкус<span class="products__text-all">Гречка</span></p>
             <p class="products__text">Цена<span class="products__text-all">400 Р.</span></p>
-            <button class="button" type="button">заказать</button>
+            <button class="button button--catalog" type="button">заказать</button>
           </li>
           <li class="products__item">
             <picture>
@@ -100,7 +119,7 @@
             <p class="products__text">Масса<span class="products__text-all">1000 г</span></p>
             <p class="products__text">Вкус<span class="products__text-all">Гречка</span></p>
             <p class="products__text">Цена<span class="products__text-all">700 Р.</span></p>
-            <button class="button" type="button">заказать</button>
+            <button class="button button--catalog" type="button">заказать</button>
           </li>
           <li class="products__item">
             <picture>
@@ -112,7 +131,7 @@
             <p class="products__text">Масса<span class="products__text-all">500 г</span></p>
             <p class="products__text">Вкус<span class="products__text-all">Рис</span></p>
             <p class="products__text">Цена<span class="products__text-all">500 Р.</span></p>
-            <button class="button" type="button">заказать</button>
+            <button class="button button--catalog" type="button">заказать</button>
           </li>
           <li class="products__item products__item--many">
             <p class="products__catalog">Показать еще 100500 товаров</p>
@@ -131,32 +150,29 @@
               <li class="additional-offers__item">
                 <h3 class="additional-offers__basis">Сахарозаменитель</h3>
                 <p class="additional-offers__text">1 упаковка (100 г)<span class="additional-offers__price">200
-                    Р.</span>
-                </p>
-                <button class="button" type="button">Заказать</button>
+                    Р.</span></p>
+                <button class="button button--additional--offers" type="button">Заказать</button>
               </li>
               <li class="additional-offers__item">
                 <h3 class="additional-offers__basis">Питьевая вода</h3>
                 <p class="additional-offers__text">5 литров<span class="additional-offers__price">50 Р.</span></p>
-                <button class="button" type="button">Заказать</button>
+                <button class="button button--additional--offers" type="button">Заказать</button>
               </li>
               <li class="additional-offers__item">
                 <h3 class="additional-offers__basis">Молоко</h3>
                 <p class="additional-offers__text">1 литр<span class="additional-offers__price">100 Р.</span></p>
-                <button class="button" type="button">Заказать</button>
+                <button class="button button--additional--offers" type="button">Заказать</button>
               </li>
               <li class="additional-offers__item">
                 <h3 class="additional-offers__basis">Витамины</h3>
                 <p class="additional-offers__text">1 упаковка (30 г)<span class="additional-offers__price">300 Р.</span>
                 </p>
-                <button class="button" type="button">Заказать</button>
+                <button class="button button--additional--offers" type="button">Заказать</button>
               </li>
             </ul>
           </div>
           <div class="additional-offers__prizes">
-            <img class="additional-offers__image--icon" src="img/icon/icon_gift.png" width="78" height="80"
-              alt="Иконка в форме подарка">
-            <p class="additional-offers__gift">Закажите все и получите чехол для кота в подарок!</p>
+            <p class="additional-offers__gift">Закажите все<br>и получите чехол для<br>кота в подарок!</p>
           </div>
         </div>
       </div>

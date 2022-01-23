@@ -18,12 +18,28 @@
 }
 
 .button--basis {
+  font-size: inherit;
+  line-height: inherit;
   background-color: #F2F2F2;
+  grid-column: 1 / 3;
+  color: @dark-grey;
+  margin-top: 21px;
+  margin-bottom: 25px;
 }
 
-.button {
+.button--additional--offers {
+  margin-bottom: 19px;
+}
+
+.button--basis {
   @media (min-width: @tablet-width) {
-    height: 54px;
+    margin-bottom: 38px;
+  }
+}
+
+.button--catalog {
+  @media (min-width: @tablet-width) {
+
   }
 }
 
@@ -40,5 +56,28 @@
 
   @media (min-width: @desktop-width) {
     width: 19%;
+  }
+}
+
+.button--catalog {
+  grid-row: 5 / 6;
+  grid-column: 1 / 4;
+  margin-bottom: 25px;
+  margin-top: 22px;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.button--catalog {
+  @media (min-width: @tablet-width) {
+    grid-row: 6 / 7;
+    margin-top: 33px;
+    margin-bottom: 39px;
+  }
+}
+
+.button--additional--offers {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
   }
 }

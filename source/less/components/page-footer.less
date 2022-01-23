@@ -5,6 +5,7 @@
 }
 .page-footer__wrapper {
   background-color: @light-color;
+  position: relative;
 }
 
 .page-footer__address {
@@ -29,7 +30,6 @@
 }
 
 .page-footer__map {
-  position: relative;
   margin: auto;
   background-image: url("img/pattern-light.jpg");
   background-position: 0 0;
@@ -41,14 +41,6 @@
   display: block;
   border: none;
   width: 100%;
-}
-
-.page-footer__map--logo {
-  display: block;
-  position: absolute;
-  top: 139px;
-  right: 129px;
-  left: 134px;
 }
 
 .page-footer__container-icon {
@@ -112,15 +104,25 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 405px;
+    height: 86px;
+    background: #FFFFFF;
     padding: 56px 80px;
-    }
+    position: absolute;
+    top: 110px;
+    left: 110px;
   }
+}
 
 .page-footer__text {
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 26px;
     padding-right: 296px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 86px;
   }
 }
 
@@ -130,22 +132,6 @@
     font-size: 16px;
     line-height: 20px;
     text-align: right;
-  }
-}
-
-.page-footer__map--logo {
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    top: 146px;
-    right: 322px;
-    left: 333px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 131px;
-    right: 419px;
-    bottom: 163px;
-    left: 908px;
   }
 }
 
