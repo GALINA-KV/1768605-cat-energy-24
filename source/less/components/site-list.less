@@ -16,6 +16,29 @@
   border-bottom: 1px solid #E6E6E6;
 }
 
+.site-list__item--active {
+  @media (min-width: @tablet-width) {
+    border-bottom: 2px solid #68B738;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid @light-color;
+  }
+}
+
+.site-list a {
+  @media (min-width: @tablet-width) {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 29px;
+    color: @light-color;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .site-list {
     width: 450px;
@@ -35,4 +58,8 @@
   }
 }
 
-
+.site-list__item--catalog {
+  @media (min-width: @desktop-width) {
+    color: @base-color;
+  }
+}

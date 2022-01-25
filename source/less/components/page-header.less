@@ -1,6 +1,5 @@
 .page-header {
   padding-top: 10px;
-  outline: 2px solid red;
   display: flex;
   flex-direction: column;
   background-color: @light-color;
@@ -26,7 +25,7 @@
    padding-right: 56px;
  }
 
-.page-header {
+ .page-header {
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
@@ -45,3 +44,13 @@
     margin: 0;
   }
 }
+
+.page-header__logo {
+  @media (min-width: @tablet-width) {
+    min-height: 52px;
+}
+
+  @media (min-width: @desktop-width) {
+    min-height: 59px;
+    }
+  }

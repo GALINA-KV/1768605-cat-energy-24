@@ -24,25 +24,25 @@
 }
 
 .instructions__item--sheet {
-  background: url(/img/index/group-one.png) 0 0/60px 60px no-repeat;
+  background: url(/img/index/group-one.svg) 0 0/60px 60px no-repeat;
 }
 
 .instructions__item--powder {
-  background: url(/img/index/group-two.png) 0 0/60px 60px no-repeat;
+  background: url(/img/index/group-two.svg) 0 0/60px 60px no-repeat;
 }
 
 .instructions__item--function {
-  background: url(/img/index/group-three.png) 0 0/60px 60px no-repeat;
+  background: url(/img/index/group-three.svg) 0 0/60px 60px no-repeat;
 }
 
 .instructions__item--alarm {
-  background: url(/img/index/group-four.png) 0 0/60px 60px no-repeat;
+  background: url(/img/index/group-four.svg) 0 0/60px 60px no-repeat;
 }
 
 .instructions__text {
   color: @dark-grey;
   margin: 0 0 0 20px;
-  padding-left: 60px;
+  padding: 5px 0 30px 60px;
 }
 
 .instructions {
@@ -74,6 +74,7 @@
     font-size: 16px;
     line-height: 24px;
     padding-top: 31px;
+    padding-right: 90px;
   }
 }
 
@@ -117,8 +118,10 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
-    margin-bottom: 37px;
+    margin-bottom: 67px;
     width: 50%;
+    position: relative;
+    z-index: 1;
   }
 
   @media (min-width: @desktop-width) {
@@ -127,28 +130,27 @@
   }
 }
 
-
 .instructions__item--sheet {
   @media (min-width: @tablet-width) {
-    background: url(/img/index/group-one.png) 0 0/80px 80px no-repeat;
+    background: url(/img/index/group-one.svg) 0 0/80px 80px no-repeat;
   }
 }
 
 .instructions__item--powder {
   @media (min-width: @tablet-width) {
-    background: url(/img/index/group-two.png) 0 0/80px 80px no-repeat;
+    background: url(/img/index/group-two.svg) 0 0/80px 80px no-repeat;
   }
 }
 
 .instructions__item--function {
   @media (min-width: @tablet-width) {
-   background: url(/img/index/group-three.png) 0 0/80px 80px no-repeat;
+   background: url(/img/index/group-three.svg) 0 0/80px 80px no-repeat;
   }
 }
 
 .instructions__item--alarm {
   @media (min-width: @tablet-width) {
-    background: url(/img/index/group-four.png) 0 0/80px 80px no-repeat;
+    background: url(/img/index/group-four.svg) 0 0/80px 80px no-repeat;
   }
 }
 
@@ -157,11 +159,64 @@
     margin-left: 0;
     padding-left: 0;
     padding-top: 111px;
+    z-index: 3;
   }
 }
 
 .instructions__item:last-child {
   @media (min-width: @desktop-width) {
     margin-right: 0;
+  }
+}
+
+.instructions__item--sheet::before {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "1";
+    font-size: 280px;
+    line-height: 280px;
+    color: #F2F2F2;
+    top: -40px;
+    left: 118px;
+    z-index: 2;
+  }
+}
+
+.instructions__item--powder::before {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "2";
+    font-size: 280px;
+    line-height: 280px;
+    color: #F2F2F2;
+    top: -40px;
+    left: 111px;
+    z-index: 2;
+  }
+}
+
+.instructions__item--function::before {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "3";
+    font-size: 280px;
+    line-height: 280px;
+    color: #F2F2F2;
+    top: -40px;
+    left: 111px;
+    z-index: 2;
+  }
+}
+
+.instructions__item--alarm::before {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "4";
+    font-size: 280px;
+    line-height: 280px;
+    color: #F2F2F2;
+    top: -40px;
+    left: 111px;
+    z-index: 2;
   }
 }

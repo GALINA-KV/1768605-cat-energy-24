@@ -1,6 +1,4 @@
 .example {
-  outline: 2px solid plum;
-  outline-offset: -2px;
   background-color: #EAEAEA;
   margin: 0;
 }
@@ -24,8 +22,18 @@
   padding-bottom: 20px;
 }
 
+.example__result {
+margin-top: 20px;
+margin-bottom: 24px;
+}
+
 .example__item {
   position: relative;
+  margin-top: 0px;
+  border: 1px solid #CDCDCD;
+  border-radius: 4px;
+  height: 56px;
+  width: 124px;
 }
 
 .example__weight {
@@ -33,9 +41,7 @@
   line-height: 24px;
   text-transform: uppercase;
   display: block;
-  padding-left: 35px;
-  position: absolute;
-  top: 15px;
+  width: 82px;
 }
 
 .example__loss {
@@ -43,7 +49,6 @@
   line-height: 12px;
   color: @dark-grey;
   text-align: center;
-  margin: 0;
 }
 
 .example__text--offer {
@@ -53,13 +58,22 @@
 }
 
 .example__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
 }
 
-.example__border {
-  display: block;
+.example__box {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+  background: #EAEAEA;
+  padding: 0 10px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5px;
 }
 
 .example {
@@ -89,7 +103,7 @@
     padding: 0 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     margin-bottom: 75px;
   }
 
@@ -118,13 +132,27 @@
 }
 
 .example__result {
+  @media (min-width: @desktop-width) {
+    grid-row: 2 / 3;
+  }
+}
+
+.example__item {
   @media (min-width: @tablet-width) {
-    grid-column: 1 / 2;
-    grid-row: 2 / 4;
+    margin-right: 42px;
+    height: 72px;
+  width: 162px;
+  }
+}
+
+.example__box {
+  @media (min-width: @tablet-width) {
+    background: #FFFFFF;
+    top: 15px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-row: 2 / 3;
+    background: #F2F2F2;
   }
 }
 
@@ -162,10 +190,17 @@
   }
 }
 
+.example__loss br {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .example__weight {
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 37px;
+    width: 102px;
   }
 
   @media (min-width: @desktop-width) {
@@ -186,7 +221,6 @@
 .example__filter {
   @media (min-width: @tablet-width) {
     background: #EAEAEA;
-    border: 1px solid red;
     padding: 0 87px;
   }
 
@@ -207,7 +241,6 @@
   @media (min-width: @desktop-width) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    padding-left: 110px;
     padding-top: 45px;
   }
 }
