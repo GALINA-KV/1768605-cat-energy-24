@@ -12,7 +12,7 @@
 .main-nav__toggle {
   position: absolute;
   right: 25px;
-  top: 32px;
+  top: 28px;
   width: 30px;
   height: 19px;
   border: none;
@@ -29,7 +29,7 @@
   width: 24px;
   height: 1px;
   background-color: #000000;
-  box-shadow: 0 4px 0 0 #000000, 0 8px 0 0 #000000;
+  box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
 }
 
 .main-nav--opened .main-nav__toggle::before,
@@ -79,6 +79,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   @media (min-width: @desktop-width) {

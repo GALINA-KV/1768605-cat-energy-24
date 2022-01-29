@@ -38,6 +38,26 @@
   }
 }
 
+.range__block label {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.range__block label::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    width: 45px;
+    background-color: @base-color;
+    height: 1px;
+    left: 2px;
+    bottom: 13px;
+  }
+}
+
 .range__filter label {
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -101,3 +121,5 @@
   left: 160px;
   }
 }
+
+

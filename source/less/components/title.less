@@ -1,24 +1,32 @@
 .title__wrapper {
-  background: url(/img/index/index-can-mobile1.png) 20px 167px/280px 270px,
-  linear-gradient(to top,white 30%, rgba(104,183,56,0.85) 70%),
-  url(/img/index/index-mobile-1.jpg) 0 0/320px 302px;
+  background: url(/img/index/index-can-mobile.png) 20px 167px/280px 270px,
+  linear-gradient(to top,white 30%, rgba(104,183,56,0.85) 30%),
+  url(/img/index/index-background-mobile.jpg) 0 0/320px 302px;
   background-repeat: no-repeat;
-  margin: 0;
+  margin-bottom: 65px;
   padding: 0;
-  height: 477px;
-}
-
-.title__wrapper {
-  @media (min-resolution: 2dppx) {
-    background-image: url(/img/index/index-can-mobile@2x.png), url(/source/img/index/index-mobile@2x.jpg);
-  }
+  height: 430px;
 }
 
 .title__wrapper {
   @media (min-width: @desktop-width) {
     @media (min-resolution: 2dppx) {
-      background-image: url(/source/img/index/index-desktop@2x.jpg);
+      background-image: url(/img/index/index-can-desktop@2x.png) 552px 499px, url(/img/index/index-desktop@2x.jpg) 720px 694px;
     }
+  }
+}
+
+.title__wrapper {
+  @media (min-width: @tablet-width) {
+    @media (min-resolution: 2dppx) {
+      background-image: url(/img/index/index-can-tablet@2x.png) 709px 609px;
+    }
+  }
+}
+
+.title__wrapper {
+  @media (min-resolution: 2dppx) {
+    background-image: url(/img/index/index-can-mobile@2x.png) 280px 270px, url(/img/index/index-background-mobile@2x.jpg) 320px 302px;
   }
 }
 
@@ -46,9 +54,9 @@
 .title {
   @media (min-width: @desktop-width) {
     margin-top: -130px;
-    background: url(/img/index/index-can-mobile1.png) 595px 141px/552px 499px,
+    background: url(/img/index/index-can-desktop.png) 595px 141px/552px 499px,
     linear-gradient(to right,#FFFFFF 50%, rgba(104,183,56,0.85) 50%),
-    url(/img/index/index-desktop1x.jpg) right 0/50% 696px;
+    url(/img/index/index-desktop.jpg) right 0/50% 696px;
     background-repeat: no-repeat;
   }
 }
@@ -57,7 +65,7 @@
   @media (min-width: @tablet-width) {
     height: 910px;
     padding: 0 30px 0 29px;
-    background: url(/img/index/index-can-mobile1.png) 0 201px/709px 609px no-repeat;
+    background: url(/img/index/index-can-tablet.png) 0 201px/709px 609px no-repeat;
   }
 
   @media (min-width: @desktop-width) {
@@ -74,12 +82,20 @@
     line-height: 60px;
     color: @base-color;
     text-align: left;
+    padding-top: 0;
+    margin-left: 87px;
+    margin-bottom: 41px;
+    margin-top: 62px;
   }
 
   @media (min-width: @desktop-width) {
     top: 225px;
     left: 110px;
     text-align: left;
+    padding-top: 0;
+    margin-top: 111px;
+    margin-bottom: 40px;
+    margin-left: 80px;
   }
 }
 
@@ -90,10 +106,12 @@
     color: @base-color;
     top: 161px;
     text-align: left;
+    margin-left: 87px;
   }
 
   @media (min-width: @desktop-width) {
     top: 385px;
     left: 110px;
+    margin-left: 80px;
   }
 }

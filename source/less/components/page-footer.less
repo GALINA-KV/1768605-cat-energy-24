@@ -64,59 +64,72 @@
 }
 
 .social__item {
- padding-right: 38px;
+ margin-right: 38px;
 }
 
 .social__item:last-child {
-  padding-right: 0;
+  margin-right: 0;
  }
 
- .social__vk-link--phone {
+ .social__link--vk {
   @media (min-width: @tablet-width) {
-    display: none;
+    width: 30px;
+    height: 22px;
   }
 }
 
-.social__vk-link--tablet {
-  display: none;
+.social__link--vk,
+.social__link--insta,
+.page-footer__copyright--card {
+  fill: #666666;
+}
 
+.social__link--facebook {
+  stroke: #666666;
+}
+
+.social__link--vk:hover,
+.social__link--insta:hover,
+.page-footer__copyright--card:hover {
+  fill: #68B738;
+}
+
+.social__link--facebook:hover {
+  stroke: #68B738;
+}
+
+
+.social__link--vk:active,
+.social__link--insta:active,
+.page-footer__copyright--card:active {
+  fill: #68B738;
+  opacity: 0.3;
+}
+
+.social__link--facebook:active {
+  stroke: #68B738;
+  opacity: 0.3;
+}
+
+.social__link--insta {
   @media (min-width: @tablet-width) {
-    display: block;
+    width: 23px;
+    height: 23px;
   }
 }
 
-.social__ins-link--phone {
+.social__link--facebook {
   @media (min-width: @tablet-width) {
-    display: none;
+    width: 28px;
+    height: 33px;
   }
 }
 
-.social__ins-link--tablet {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-  }
-}
-
-.social__fac-link--phone {
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.social__fac-link--tablet {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-  }
-}
-
- .page-footer__copyright {
-   padding: 22px 20px;
-   display: flex;
-   justify-content: space-between;
+.page-footer__copyright {
+  padding: 22px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
  }
 
 .page-footer__copyright p {
@@ -124,6 +137,10 @@
   line-height: 18px;
   color: @dark-grey;
   margin: 0;
+}
+
+.page-footer__copyright--card {
+  padding: 0;
 }
 
 .page-footer__map iframe {
@@ -156,7 +173,7 @@
 .page-footer__location--city {
   @media (min-width: @tablet-width) {
     display: block;
-    padding-top: 7px;
+    padding-top: 10px;
   }
 }
 
@@ -164,11 +181,10 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 26px;
-    padding-right: 296px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 86px;
+    margin-right: 86px;
   }
 }
 
@@ -178,6 +194,11 @@
     font-size: 16px;
     line-height: 20px;
     text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-shrink: 0;
+    width: 170px;
   }
 }
 

@@ -16,11 +16,21 @@
   border-bottom: 1px solid #E6E6E6;
 }
 
-.site-list__item--active {
+.site-list__item a:hover {
+  opacity: 0.6;
+}
+
+.site-list__item a:active {
+  opacity: 0.3;
+}
+
+.site-list__item--active:active {
   @media (min-width: @tablet-width) {
     border-bottom: 2px solid #68B738;
   }
+}
 
+.site-list__item--active-index:active {
   @media (min-width: @desktop-width) {
     border-bottom: 2px solid @light-color;
   }
@@ -35,7 +45,7 @@
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 29px;
-    color: @light-color;
+    color: @base-color;
   }
 }
 
@@ -58,8 +68,9 @@
   }
 }
 
-.site-list__item--catalog {
+
+.site-list__item--index a{
   @media (min-width: @desktop-width) {
-    color: @base-color;
+    color: @light-color;
   }
 }
